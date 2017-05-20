@@ -1,0 +1,92 @@
+doctype html
+html(lang="en")
+  head
+    title Advertise with us | Westminster SU
+    meta(charset="UTF-8")
+    meta(name="viewport",content="width=device-width, initial-scale=1")
+    link(type="text/css",rel="stylesheet",href="style.css")
+  body
+    header
+      div.container
+        img(src="img/su.png")
+        h3 Advertise with us
+    section#hero
+      div.bg(style="background-image:url('img/hero.jpg')")
+      div.content
+        h1
+          span Advertise
+          |  to 22,000 eager students...
+        aside
+          a(href="#").button See the media pack
+          a(href="#").button Get in touch
+      svg(height="100",width="100",preserveAspectRatio="none",viewBox="0 0 100 100").slice
+        polygon(points="100,0 100,100, 0,100",style="fill:white;")
+      svg(height="120",width="100",viewBox="0 0 100 120")#arrows
+        g
+          line(x1="2.5" y1="2.5" x2="37.5" y2="37.5")
+          line(x1="72.5" y1="2.5" x2="37.5" y2="37.5")
+        g
+          line(x1="12.5" y1="40.5" x2="37.5" y2="65.5")
+          line(x1="62.5" y1="40.5" x2="37.5" y2="65.5")
+      
+      
+    
+    section#sells
+      article.sell
+        aside
+          h2 Digital and print
+          p Gain access to 22,000 students by advertising on the SU website, directly via screens on campus, or via our award-winning student media platforms.
+        img(src="img/sell-1.svg")
+      article.sell
+        aside
+          h2 Reach out directly at
+            br
+            | arrivals week
+          p Book stalls at any of our four fairs to directly connect with freshers at the 
+            a(href="#") biggest event of the academic year.
+        img(src="img/sell-2.svg")
+
+    section#packages
+      svg(height="100",width="100",preserveAspectRatio="none",viewBox="0 0 100 100").slice
+        polygon(points="100,0 0,0, 0,100",style="fill:white;")
+      svg(height="100",width="100",preserveAspectRatio="none",viewBox="0 0 100 100").slice
+        polygon(points="100,0 100,100, 0,100",style="fill:white;")
+      div.bg(style="background-image:url('img/products.jpg')")
+      
+      article.packages
+        h2.section-title What's on offer?
+        div.slider
+          ul.labels
+            li.current Student media
+            li Digital
+            li Onsite
+          ul.slides
+            li
+              div.img(style="background-image:url('/img/hero.jpg')")
+              div
+                h3 Package title
+                p Package description goes right here
+            li
+              div.img(style="background-image:url('/img/hero.jpg')")
+              div
+                h3 Package title
+                p Package description goes right here
+            li
+              div.img(style="background-image:url('/img/hero.jpg')")
+              div
+                h3 Package title
+                p Package description goes right here    
+
+    section#cta
+      h2 Interested?
+      div.buttons
+        a(href="#").button See the media pack
+        a(href="#").button Get in touch
+      a(href="#").terms Terms and conditions
+      
+    footer
+      div.container
+        img(src="img/su.png")
+        p Design: Joshua Hackett
+      
+    script(src="app.js")
