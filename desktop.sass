@@ -1,0 +1,87 @@
+@media screen and (min-width: 950px)
+  section#packages
+    article
+      max-width: 960px
+      margin: 80px auto 0px auto
+
+@media screen and (min-width: 800px)
+  section#hero
+    div.content
+      h1
+        font-size: 3em
+
+  section#sells
+    article.sell:nth-of-type(even)
+      aside.media
+        order: -1
+      aside.caption
+        padding-right: 0px
+        padding-left: 50px
+        h3, p
+          text-align: right
+        .icons
+          justify-content: flex-end
+    article.sell
+      display: flex
+      flex-direction: row
+      aside.caption
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding-right: 100px
+        .icons
+          justify-content: flex-start
+        h3
+          text-align: left
+          font-size: 2.2em
+        p
+          text-align: left
+          font-size: 1em
+
+  section#packages
+    article.packages
+      padding: 40px
+      max-width: 950px
+      h2
+        font-size: 2em
+      ul.slider
+        display: flex
+        flex-direction: row
+        li
+          margin-right: 20px
+          margin-bottom: 0px
+          &:last-of-type
+            margin-right: 0px
+  section#cta
+    div.buttons
+      a
+        display: inline-block
+        border-radius: 2px
+        width: 215px
+        text-align: center
+        &:first-of-type
+          margin-bottom: 0px
+          margin-right: 10px
+          i
+            margin-left: 10px
+
+@media screen and (min-width: 1500px)
+  section#hero
+    div.content
+      h1
+        font-size: 5em
+      h2
+        font-size: 1.2em
+  section#sells
+    article.sell
+      max-width: 1100px
+      aside.caption
+        h3
+          font-size: 2.5em
+  section#packages
+    article.packages
+      h2
+        font-size: 2.5em
+  section#cta
+    h2
+      font-size: 4em

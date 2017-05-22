@@ -1,0 +1,93 @@
+@media screen and (min-width: 950px) {
+  section#packages article {
+    max-width: 960px;
+    margin: 80px auto 0px auto; } }
+
+@media screen and (min-width: 800px) {
+  section#hero div.content h1 {
+    font-size: 3em; }
+  section#sells article.sell:nth-of-type(even) aside.media {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1; }
+  section#sells article.sell:nth-of-type(even) aside.caption {
+    padding-right: 0px;
+    padding-left: 50px; }
+    section#sells article.sell:nth-of-type(even) aside.caption h3, section#sells article.sell:nth-of-type(even) aside.caption p {
+      text-align: right; }
+    section#sells article.sell:nth-of-type(even) aside.caption .icons {
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; }
+  section#sells article.sell {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+    section#sells article.sell aside.caption {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      padding-right: 100px; }
+      section#sells article.sell aside.caption .icons {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start; }
+      section#sells article.sell aside.caption h3 {
+        text-align: left;
+        font-size: 2.2em; }
+      section#sells article.sell aside.caption p {
+        text-align: left;
+        font-size: 1em; }
+  section#packages article.packages {
+    padding: 40px;
+    max-width: 950px; }
+    section#packages article.packages h2 {
+      font-size: 2em; }
+    section#packages article.packages ul.slider {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; }
+      section#packages article.packages ul.slider li {
+        margin-right: 20px;
+        margin-bottom: 0px; }
+        section#packages article.packages ul.slider li:last-of-type {
+          margin-right: 0px; }
+  section#cta div.buttons a {
+    display: inline-block;
+    border-radius: 2px;
+    width: 215px;
+    text-align: center; }
+    section#cta div.buttons a:first-of-type {
+      margin-bottom: 0px;
+      margin-right: 10px; }
+      section#cta div.buttons a:first-of-type i {
+        margin-left: 10px; } }
+
+@media screen and (min-width: 1500px) {
+  section#hero div.content h1 {
+    font-size: 5em; }
+  section#hero div.content h2 {
+    font-size: 1.2em; }
+  section#sells article.sell {
+    max-width: 1100px; }
+    section#sells article.sell aside.caption h3 {
+      font-size: 2.5em; }
+  section#packages article.packages h2 {
+    font-size: 2.5em; }
+  section#cta h2 {
+    font-size: 4em; } }
