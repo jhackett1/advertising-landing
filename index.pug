@@ -93,21 +93,84 @@ html(lang="en")
           li Digital
           li Onsite
         ul.slider
-          li
-            div.img(style="background-image:url('img/hero.jpg')")
-            div.caption
-              h3 Product name here
-              p Description about product goes here
-          li
-            div.img(style="background-image:url('img/hero2.jpg')")
-            div.caption
-              h3 Another product
-              p Description about product goes here
-          li
-            div.img(style="background-image:url('img/products.jpg')")
-            div.caption
-              h3 Last product here
-              p Description about product goes here
+          ul.slide.selected#media
+            li
+              div.img(style="background-image:url('img/media_qh.jpg')")
+              div.cover
+                h4 Monthly
+                p Editions
+              div.caption
+                h3 QH newspaper
+                p Half and quarter page ads in this student-made current affairs publication.
+            li
+              div.img(style="background-image:url('img/media_mag.jpg')")
+              div.cover
+                h4 28
+                p pages
+              div.caption
+                h3 Smoke Mag
+                p Description about product goes here
+            li
+              div.img(style="background-image:url('img/media_radio.jpg')")
+              div.cover
+                h4 24/7
+                p During termtime
+              div.caption
+                h3 Smoke Radio
+                p Our campus radio station has been twice recognised as one of the best in the country.
+
+          ul.slide#digital
+            li
+              div.img(style="background-image:url('img/digital_social.jpg')")
+              div.cover
+                h4 Crazy
+                p Sales
+              div.caption
+                h3 Social media promotion
+                p Description about product goes right about here ummhmm yes description love that lorem
+            li
+              div.img(style="background-image:url('img/digital_web.jpg')")
+              div.cover
+                h4 3500
+                p Numbers
+              div.caption
+                h3 Website banner
+                p Description about product goes here
+            li
+              div.img(style="background-image:url('img/digital_email.jpg')")
+              div.cover
+                h4 100%
+                p Engagement
+              div.caption
+                h3 Email banner
+                p Description about product goes here
+          
+          ul.slide#onsite
+            li
+              div.img(style="background-image:url('img/products.jpg')")
+              div.cover
+                h4 Crazy
+                p Sales
+              div.caption
+                h3 Arrivals Fair stall
+                p Description about product goes here
+            li
+              div.img(style="background-image:url('img/products.jpg')")
+              div.cover
+                h4 3500
+                p Numbers
+              div.caption
+                h3 Campus plasma screens
+                p Description about product goes here loremy loremy loremy loremy loremy loremy loremy ipsumy
+            li
+              div.img(style="background-image:url('img/products.jpg')")
+              div.cover
+                h4 100%
+                p Engagement
+              div.caption
+                h3 Undercroft Bar screens
+                p Description about product goes here
+
       svg(height="0",width="100%",preserveAspectRatio="none",viewBox="0 0 100 100").cut
         polygon(points="100,0 100,100, 0,100",style="fill:white;")
       svg(height="0",width="100%",preserveAspectRatio="none",viewBox="0 0 100 100").cut
@@ -119,7 +182,7 @@ html(lang="en")
         a(href="#")
           | Get the media pack
           i.fa.fa-caret-down
-        a(href="#") Get in touch
+        a(href="mailto:S.Parsons1@westminster.ac.uk") Get in touch
       a(href="#").terms Terms & conditions
     footer
         a(href="http://uwsu.com")

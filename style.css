@@ -440,35 +440,42 @@ section#packages {
         font-size: 0.7em;
         margin-right: 5px;
         text-align: center;
-        cursor: pointer; }
+        cursor: pointer;
+        -webkit-transition: 0.5s;
+        transition: 0.5s; }
         section#packages article ul.labels li.current {
           background-color: #9C2133; }
         section#packages article ul.labels li:hover {
           -webkit-filter: brightness(1.1);
           filter: brightness(1.1); }
-    section#packages article ul.slider {
+    section#packages article ul.slider ul.slide:first-of-type li {
+      opacity: 0;
+      -webkit-transform: translate3d(30px, 0px, 0px);
+      transform: translate3d(30px, 0px, 0px); }
+    section#packages article ul.slider ul.slide:first-of-type li.visible {
+      opacity: 1;
+      -webkit-transform: translate3d(0px, 0px, 0px);
+      transform: translate3d(0px, 0px, 0px); }
+    section#packages article ul.slider ul.slide {
+      display: none; }
+    section#packages article ul.slider ul.slide.selected {
       list-style-type: none;
-      margin: 10px; }
-      section#packages article ul.slider li.visible {
-        opacity: 1;
-        -webkit-transform: translate3d(0px, 0px, 0px);
-        transform: translate3d(0px, 0px, 0px); }
-      section#packages article ul.slider li {
+      margin: 10px;
+      display: block; }
+      section#packages article ul.slider ul.slide.selected li {
         width: 100%;
         background-color: #efefef;
+        position: relative;
         margin-bottom: 30px;
-        opacity: 0;
-        -webkit-transform: translate3d(30px, 0px, 0px);
-        transform: translate3d(30px, 0px, 0px);
         -webkit-transition: 0.5s;
         transition: 0.5s; }
-        section#packages article ul.slider li:hover div.img {
-          -webkit-filter: grayscale(0);
-          filter: grayscale(0);
-          background-size: 12 120%; }
-        section#packages article ul.slider li:hover div.caption::before {
+        section#packages article ul.slider ul.slide.selected li:hover div.cover {
+          opacity: 1;
+          -webkit-transform: scale(1);
+          transform: scale(1); }
+        section#packages article ul.slider ul.slide.selected li:hover div.caption::before {
           top: -15px; }
-        section#packages article ul.slider li div.img {
+        section#packages article ul.slider ul.slide.selected li div.img {
           width: 100%;
           height: 200px;
           -webkit-filter: grayscale(1);
@@ -477,29 +484,41 @@ section#packages {
           transition: 0.2s;
           background-size: cover;
           background-position: center; }
-        section#packages article ul.slider li div.caption {
+        section#packages article ul.slider ul.slide.selected li div.cover {
+          position: absolute;
+          top: 0px;
+          height: 200px;
+          width: 100%;
+          background-color: rgba(156, 33, 51, 0.7);
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          opacity: 0;
+          -webkit-transition: 0.2s;
+          transition: 0.2s;
+          color: #fafafa; }
+          section#packages article ul.slider ul.slide.selected li div.cover h4 {
+            font-size: 3em; }
+        section#packages article ul.slider ul.slide.selected li div.caption {
           padding: 20px;
           text-align: center;
           position: relative; }
-          section#packages article ul.slider li div.caption::before {
-            content: "";
-            position: absolute;
-            z-index: 3;
-            top: -25px;
-            left: 50%;
-            -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-            width: 0;
-            height: 0;
-            border-left: 25px solid transparent;
-            border-right: 25px solid transparent;
-            border-bottom: 25px solid #efefef;
-            -webkit-transition: 0.2s;
-            transition: 0.2s; }
-          section#packages article ul.slider li div.caption h3 {
+          section#packages article ul.slider ul.slide.selected li div.caption h3 {
             color: #505050;
             margin-bottom: 10px; }
-          section#packages article ul.slider li div.caption p {
+          section#packages article ul.slider ul.slide.selected li div.caption p {
             color: #969696;
             font-size: 0.8em; }
 
@@ -561,7 +580,7 @@ section#cta {
 
 @media screen and (min-width: 800px) {
   section#hero div.content h1 {
-    font-size: 3em; }
+    font-size: 4em; }
   section#sells article.sell:nth-of-type(even) aside.media {
     -webkit-box-ordinal-group: 0;
     -ms-flex-order: -1;
@@ -610,7 +629,7 @@ section#cta {
     max-width: 950px; }
     section#packages article.packages h2 {
       font-size: 2em; }
-    section#packages article.packages ul.slider {
+    section#packages article.packages ul.slider ul.slide.selected {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -618,10 +637,10 @@ section#cta {
       -webkit-box-direction: normal;
       -ms-flex-direction: row;
       flex-direction: row; }
-      section#packages article.packages ul.slider li {
+      section#packages article.packages ul.slider ul.slide.selected li {
         margin-right: 20px;
         margin-bottom: 0px; }
-        section#packages article.packages ul.slider li:last-of-type {
+        section#packages article.packages ul.slider ul.slide.selected li:last-of-type {
           margin-right: 0px; }
   section#cta div.buttons a {
     display: inline-block;

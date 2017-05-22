@@ -8,7 +8,7 @@
   section#hero
     div.content
       h1
-        font-size: 3em
+        font-size: 4em
 
   section#sells
     article.sell:nth-of-type(even)
@@ -45,13 +45,14 @@
       h2
         font-size: 2em
       ul.slider
-        display: flex
-        flex-direction: row
-        li
-          margin-right: 20px
-          margin-bottom: 0px
-          &:last-of-type
-            margin-right: 0px
+        ul.slide.selected
+          display: flex
+          flex-direction: row
+          li
+            margin-right: 20px
+            margin-bottom: 0px
+            &:last-of-type
+              margin-right: 0px
   section#cta
     div.buttons
       a

@@ -5,7 +5,7 @@
 
 @media screen and (min-width: 800px) {
   section#hero div.content h1 {
-    font-size: 3em; }
+    font-size: 4em; }
   section#sells article.sell:nth-of-type(even) aside.media {
     -webkit-box-ordinal-group: 0;
     -ms-flex-order: -1;
@@ -54,7 +54,7 @@
     max-width: 950px; }
     section#packages article.packages h2 {
       font-size: 2em; }
-    section#packages article.packages ul.slider {
+    section#packages article.packages ul.slider ul.slide.selected {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -62,10 +62,10 @@
       -webkit-box-direction: normal;
       -ms-flex-direction: row;
       flex-direction: row; }
-      section#packages article.packages ul.slider li {
+      section#packages article.packages ul.slider ul.slide.selected li {
         margin-right: 20px;
         margin-bottom: 0px; }
-        section#packages article.packages ul.slider li:last-of-type {
+        section#packages article.packages ul.slider ul.slide.selected li:last-of-type {
           margin-right: 0px; }
   section#cta div.buttons a {
     display: inline-block;
