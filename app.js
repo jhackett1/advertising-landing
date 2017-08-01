@@ -15,16 +15,14 @@ function parallaxStrength(element){
   }
 }
 
-// Make the pointer SVG clickable
-document.getElementById('arrows').addEventListener('click', function(){
-  document.querySelector('#sells').scrollIntoView({block: 'end',  behaviour: 'smooth'});
-})
 
 // Scroll event handler
 window.addEventListener('scroll', function(event){
 
   // Keep track of the current scroll position of the page
   var scrollPos = window.pageYOffset;
+
+
 
   // Animate the hero section when it is in view
   if (document.querySelector('section#hero').getBoundingClientRect().bottom > 0) {
@@ -52,7 +50,6 @@ window.addEventListener('scroll', function(event){
   document.querySelectorAll('ul.slider').forEach(function(element){
     // If the container is scrolling into view, do things
     if ((scrollPos+(document.documentElement.clientHeight*0.75)) > (element.getBoundingClientRect().top+scrollPos)) {
-      console.log('aha')
       animateTiles(element);
     }
   });
@@ -86,7 +83,6 @@ window.addEventListener('scroll', function(event){
 
 // THE SLIDER/TAB THING
 // -------------------------------------------------------------------
-
 // First, grab all labels and record their index
 document.querySelectorAll('ul.labels li').forEach(function(element,index){
   // When a label is clicked
@@ -97,7 +93,6 @@ document.querySelectorAll('ul.labels li').forEach(function(element,index){
       elementb.classList = '';
     });
     labels[index].classList += 'current';
-
     // Hide all slides
     var slides = document.querySelectorAll('ul.slider ul.slide');
     slides.forEach(function(elementa){
@@ -106,4 +101,36 @@ document.querySelectorAll('ul.labels li').forEach(function(element,index){
     // Show desired slide
     slides[index].classList += ' selected';
   })
+})
+
+
+
+
+// SMOOTH SCROLLING ANCHOR
+// -------------------------------------------------------------------
+function scrollMe(targetQuery, duration){
+  // Grab the element
+  var element = document.querySelector(targetQuery);
+  // Get the distance which must be scrolled as a positive (scroll down) or negative (scroll up) float
+  var targetX = document.querySelector('#hero').getBoundingClientRect().bottom;
+  // A new animation frame every 20 ms (roughly 50/60 fps)
+  var increment = 20;
+  // How much should the animation advance per increment, in px?
+  var currentTime = 0;
+  function takeAStep(){
+    var rawStep = targetX / (duration/increment);
+    var t = currentTime/duration;
+    function easeInOut (t) { return t<.5 ? 16*t*t*t*t*t : 1+16*(--t)*t*t*t*t }
+    var easer = easeInOut(t)
+    var step = rawStep * easer;
+    document.body.scrollTop += step;
+    currentTime += increment;
+    if (document.body.scrollTop < targetX) {
+      setTimeout(takeAStep, increment);
+    }
+  }
+  takeAStep();
+}
+document.getElementById('arrows').addEventListener('click', function(){
+  scrollMe('#sells', 1000)
 })

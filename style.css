@@ -448,11 +448,9 @@ section#packages {
         section#packages article ul.labels li:hover {
           -webkit-filter: brightness(1.1);
           filter: brightness(1.1); }
-    section#packages article ul.slider ul.slide:first-of-type li {
-      opacity: 0;
-      -webkit-transform: translate3d(30px, 0px, 0px);
-      transform: translate3d(30px, 0px, 0px); }
-    section#packages article ul.slider ul.slide:first-of-type li.visible {
+    section#packages article ul.slider ul.slide.selected li {
+      opacity: 0; }
+    section#packages article ul.slider ul.slide.selected li.visible {
       opacity: 1;
       -webkit-transform: translate3d(0px, 0px, 0px);
       transform: translate3d(0px, 0px, 0px); }
@@ -511,6 +509,9 @@ section#packages {
           color: #fafafa; }
           section#packages article ul.slider ul.slide.selected li div.cover h4 {
             font-size: 3em; }
+          section#packages article ul.slider ul.slide.selected li div.cover p {
+            max-width: 200px;
+            text-align: center; }
         section#packages article ul.slider ul.slide.selected li div.caption {
           padding: 20px;
           text-align: center;

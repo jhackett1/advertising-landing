@@ -338,10 +338,10 @@ section#packages
         &:hover
           filter: brightness(1.1)
     ul.slider
-      ul.slide:first-of-type
+      ul.slide.selected
         li
           opacity: 0
-          transform: translate3d(30px,0px,0px)
+
         li.visible
           opacity: 1
           transform: translate3d(0px,0px,0px)
@@ -356,8 +356,6 @@ section#packages
           background-color: #efefef
           position: relative
           margin-bottom: 30px
-          // opacity: 0
-          // transform: translate3d(30px,0px,0px)
           transition: 0.5s
           &:hover
             div.cover
@@ -389,6 +387,9 @@ section#packages
             color: $white
             h4
               font-size: 3em
+            p
+              max-width: 200px
+              text-align: center
           div.caption
             padding: 20px
             text-align: center
